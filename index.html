@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idli & Dosa Express - Authentic South Indian Food Delivered</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://placehold.co/1600x900/FFF1E6/4D2C0F?text=Delicious+Idli+%26+Dosa');
+            background-size: cover;
+            background-position: center;
+        }
+        .menu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-orange-600 font-playfair">Idli & Dosa Express</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#home" class="text-gray-600 hover:text-orange-500 transition duration-300">Home</a>
+                <a href="#menu" class="text-gray-600 hover:text-orange-500 transition duration-300">Menu</a>
+                <a href="#how-it-works" class="text-gray-600 hover:text-orange-500 transition duration-300">How It Works</a>
+                <a href="#order" class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition duration-300">Order Now</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 hover:text-orange-500 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2">
+            <a href="#home" class="block px-6 py-2 text-gray-600 hover:bg-orange-50">Home</a>
+            <a href="#menu" class="block px-6 py-2 text-gray-600 hover:bg-orange-50">Menu</a>
+            <a href="#how-it-works" class="block px-6 py-2 text-gray-600 hover:bg-orange-50">How It Works</a>
+            <a href="#order" class="block px-6 py-2 text-gray-600 hover:bg-orange-50">Order Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white">
+        <div class="container mx-auto px-6 py-32 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold font-playfair mb-4">Authentic South Indian Breakfast</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">Freshly made Idli and crispy Dosa, delivered straight from our kitchen to your doorstep. Wake up to the taste of tradition!</p>
+            <a href="#order" class="bg-orange-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-orange-600 transition duration-300">Place Your Order</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 font-playfair">Our Menu</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Menu Item 1: Idli -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 menu-card">
+                    <img src="https://placehold.co/600x400/FFE8D6/6B705C?text=Steamed+Idli" alt="Steamed Idli" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FFE8D6/6B705C?text=Image+Not+Found';">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Steamed Idli (4 pcs)</h3>
+                        <p class="text-gray-600 mb-4">Soft, fluffy, steamed rice cakes served with sambar and coconut chutney.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-orange-600">$5.99</span>
+                            <button class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Menu Item 2: Masala Dosa -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 menu-card">
+                    <img src="https://placehold.co/600x400/DDBEA9/A5A58D?text=Masala+Dosa" alt="Masala Dosa" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/DDBEA9/A5A58D?text=Image+Not+Found';">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Masala Dosa</h3>
+                        <p class="text-gray-600 mb-4">Crispy rice crepe filled with a savory spiced potato mash. A classic favorite!</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-orange-600">$8.99</span>
+                            <button class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Menu Item 3: Medu Vada -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 menu-card">
+                    <img src="https://placehold.co/600x400/CB997E/B7B7A4?text=Medu+Vada" alt="Medu Vada" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/CB997E/B7B7A4?text=Image+Not+Found';">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Medu Vada (2 pcs)</h3>
+                        <p class="text-gray-600 mb-4">Crispy on the outside, soft on the inside. Savory lentil doughnuts.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-orange-600">$4.99</span>
+                            <button class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="bg-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 font-playfair">Quick & Easy Ordering</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="flex flex-col items-center">
+                    <div class="bg-orange-100 rounded-full p-6 mb-4">
+                        <svg class="w-12 h-12 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">1. Browse the Menu</h3>
+                    <p class="text-gray-600">Choose your favorite dishes from our authentic menu.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-orange-100 rounded-full p-6 mb-4">
+                        <svg class="w-12 h-12 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">2. Place Your Order</h3>
+                    <p class="text-gray-600">Add items to your cart and tell us where to deliver.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-orange-100 rounded-full p-6 mb-4">
+                        <svg class="w-12 h-12 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2-2h8a1 1 0 001-1z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">3. Enjoy Your Meal</h3>
+                    <p class="text-gray-600">Get hot and fresh food delivered right to your door.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="order" class="py-20 bg-orange-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 font-playfair">Place Your Order</h2>
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <form id="order-form">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="address" class="block text-gray-700 font-medium mb-2">Delivery Address</label>
+                        <textarea id="address" name="address" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required></textarea>
+                    </div>
+                    <div class="mb-6">
+                        <label for="order-details" class="block text-gray-700 font-medium mb-2">Your Order (e.g., 2x Idli, 1x Masala Dosa)</label>
+                        <textarea id="order-details" name="order-details" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-orange-500 text-white w-full md:w-auto px-8 py-3 rounded-full text-lg font-semibold hover:bg-orange-600 transition duration-300">Submit Order</button>
+                    </div>
+                </form>
+                <div id="form-message" class="mt-6 text-center"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-2xl font-bold font-playfair mb-2">Idli & Dosa Express</p>
+            <p class="mb-4">Delivering happiness, one breakfast at a time.</p>
+            <p>&copy; 2024 Idli & Dosa Express. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Form submission handling
+        const orderForm = document.getElementById('order-form');
+        const formMessage = document.getElementById('form-message');
+        orderForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Basic form validation feedback
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+            const orderDetails = document.getElementById('order-details').value;
+
+            if(name && phone && address && orderDetails) {
+                formMessage.innerHTML = `
+                    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg" role="alert">
+                        <strong class="font-bold">Thank you, ${name}!</strong>
+                        <span class="block sm:inline">Your order has been received. We will call you shortly to confirm.</span>
+                    </div>
+                `;
+                orderForm.reset();
+            } else {
+                 formMessage.innerHTML = `
+                    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg" role="alert">
+                        <strong class="font-bold">Oops!</strong>
+                        <span class="block sm:inline">Please fill out all the fields to place your order.</span>
+                    </div>
+                `;
+            }
+
+            // In a real application, you would send this data to a server.
+            // For example:
+            // fetch('/api/orders', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify({ name, phone, address, orderDetails })
+            // })
+            // .then(response => response.json())
+            // .then(data => { ... });
+        });
+    </script>
+
+</body>
+</html>
